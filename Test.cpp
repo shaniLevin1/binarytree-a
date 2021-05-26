@@ -28,7 +28,7 @@ TEST_CASE("INT TREE -> add root left right test"){
     }
 
     SUBCASE("node is not in the tree"){
-        CHECK_THROWS(bt.add_left(8,4)); //'8' is not in the tree
+        CHECK_THROWS(bt.add_left(8,4)); 
         CHECK_THROWS(bt.add_right(16,23));
         CHECK_THROWS(bt.add_left(20,21));
         CHECK_THROWS(bt.add_right(42,90));
@@ -70,7 +70,7 @@ TEST_CASE("CHAR TREE -> add root left right test"){
     */
 
     SUBCASE("change root"){
-        CHECK_NOTHROW(bt.add_root('J')); //change the root to ''
+        CHECK_NOTHROW(bt.add_root('J')); //change the root to 'J'
         CHECK_NOTHROW(bt.add_root('K'));
         CHECK_NOTHROW(bt.add_root('L'));
 
@@ -85,16 +85,11 @@ TEST_CASE("CHAR TREE -> add root left right test"){
     */
     }
     SUBCASE("node is not in the tree"){
-        CHECK_THROWS(bt.add_left(8,4)); //'8' is not in the tree
-        CHECK_THROWS(bt.add_right(16,23));
-        CHECK_THROWS(bt.add_left(20,21));
-        CHECK_THROWS(bt.add_right(42,90));
+        CHECK_THROWS(bt.add_left('M','A')); 
+        CHECK_THROWS(bt.add_right('N','B'));
+        CHECK_THROWS(bt.add_left('O','C'));
+        CHECK_THROWS(bt.add_right('P','D'));
     }
 
     
 }
-
-
-
-
-
